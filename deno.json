@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch main.dev.ts",
+    "test": "deno test -A test/app.ts",
+    "start": "deno run -A main.prod.ts"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["deno.window"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "importMap": "./import_map.json"
+}
