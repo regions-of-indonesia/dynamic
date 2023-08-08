@@ -2,8 +2,7 @@
   "imports": {
     "~/": "./src/",
     "std/assert/": "https://deno.land/std@0.197.0/assert/",
-    "std/http/": "https://deno.land/std@0.197.0/http/",
-    "hono/": "https://deno.land/x/hono@v3.3.4/",
+    "hono/": "https://deno.land/x/hono@v3.4.1/",
     "fuse.js": "https://esm.sh/fuse.js@6.6.2",
     "@regions-of-indonesia/data": "https://esm.sh/@regions-of-indonesia/data@5.0.0-4",
     "@regions-of-indonesia/types": "https://esm.sh/@regions-of-indonesia/types@1.0.0-0",
