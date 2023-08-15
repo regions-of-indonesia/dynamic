@@ -3,7 +3,7 @@
     "~/": "./src/",
     "std/assert/": "https://deno.land/std@0.197.0/assert/",
     "hono/": "https://deno.land/x/hono@v3.4.1/",
-    "@regions-of-indonesia/data/": "https://esm.sh/@regions-of-indonesia/data@5.0.0-4/",
+    "@regions-of-indonesia/data/": "https://esm.sh/@regions-of-indonesia/data@5.0.0/",
     "@regions-of-indonesia/types": "https://esm.sh/@regions-of-indonesia/types@1.0.0-0",
     "@regions-of-indonesia/utils": "https://esm.sh/@regions-of-indonesia/utils@1.0.0-3"
   }
