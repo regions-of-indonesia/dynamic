@@ -66,16 +66,16 @@
     "https://deno.land/x/hono@v3.4.1/utils/url.ts": "5fc3307ef3cb2e6f34ec2a03e3d7f2126c6a9f5f0eab677222df3f0e40bd7567",
     "https://deno.land/x/hono@v3.4.1/validator/index.ts": "6c986e8b91dcf857ecc8164a506ae8eea8665792a4ff7215471df669c632ae7c",
     "https://deno.land/x/hono@v3.4.1/validator/validator.ts": "7822737bf1d5d5b35709bc3c70862f3e7bd6a2746a51cc022b577816d2611242",
-    "https://esm.sh/@regions-of-indonesia/data@5.0.1/district": "a607d67c9fc4965b1822e740b4de91d39700c8e8d76cb4bc3dd73f3e1c549ba8",
-    "https://esm.sh/@regions-of-indonesia/data@5.0.1/province": "9900cff338817c8cfc687d696e40b7869867be2e9d62b52e2a88d40a8439b394",
-    "https://esm.sh/@regions-of-indonesia/data@5.0.1/subdistrict": "b0ab4cc27027c920edfeb9a39f67b910208876c98d449399ed2811b26afb531f",
-    "https://esm.sh/@regions-of-indonesia/data@5.0.1/village": "7fabbdfd4c99de6efdb368a483f9cf826f096d315e6c2174a95f730b896f1a97",
-    "https://esm.sh/@regions-of-indonesia/types@5.0.0": "fabf6997a3adf11e45d11e3c4d58d0634ab98f9d72f3116f3694123818ccd457",
-    "https://esm.sh/@regions-of-indonesia/utils@5.0.0": "e88515532caebd351f5950da572866f3eb426d8ebfefe57a646b77f84d7257cf",
-    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.1/denonext/district.js": "517cf2168171a6090123817cb923db9e7539b8554a947958495048bafeb62945",
-    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.1/denonext/province.js": "1023d01e20513d7dc5d30070b27b1049cb6947cc9eac51be7c329a43788c2a9e",
-    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.1/denonext/subdistrict.js": "a93202f7d48fae1d4716dd5b5a003e04dac3bb15aca46ae2e09eca186d9501f6",
-    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.1/denonext/village.js": "8ef5ec631c0b89d6aca65ac79535744710764d6303d7dc7e13b3436f0b493442",
-    "https://esm.sh/v131/@regions-of-indonesia/utils@5.0.0/denonext/utils.mjs": "42174d7d7c45820a30cb6cd49e3643f0292b923edc1ce7a57bfa1fb2560a95cc"
+    "https://esm.sh/@regions-of-indonesia/data@5.0.2/district": "bf7b7fca1631b24515a92edb00c101d41b99a3701ea25720920b22d14f78201d",
+    "https://esm.sh/@regions-of-indonesia/data@5.0.2/province": "508ceb2d717e7bb626c280fdf66c5410f94ba167ac18de62afd05a1631f13aee",
+    "https://esm.sh/@regions-of-indonesia/data@5.0.2/subdistrict": "6efa857d3c806833b5ebf8b1439c9ca002554c1366974811b09a14a8227193f4",
+    "https://esm.sh/@regions-of-indonesia/data@5.0.2/village": "d36c21030d780f0987faf472d5c8a8dc62f12f853c3847d694aab05a3ad46e5e",
+    "https://esm.sh/@regions-of-indonesia/types@5.0.1": "fabf6997a3adf11e45d11e3c4d58d0634ab98f9d72f3116f3694123818ccd457",
+    "https://esm.sh/@regions-of-indonesia/utils@5.0.1": "1ba42c83b9c389a3307912d6b88cc81e53ba49f47e5a07db1187b11b08e9c733",
+    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.2/denonext/district.js": "245281abe4be90e1112cea2f3d6b0c016644c4af44c3db7dac25993aa11926b7",
+    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.2/denonext/province.js": "7758cd4ff619fe40e600b5521abc1bd9d138c4b5119ce62c495f36e748d9d2cf",
+    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.2/denonext/subdistrict.js": "d97090d6fa5f5fbc76d2e9876b84a24434926301c9a4e691012bbe7fe955ded9",
+    "https://esm.sh/v131/@regions-of-indonesia/data@5.0.2/denonext/village.js": "878b726f29653350324fb0fec9575f431c14d350edcad181589e88f80f38b046",
+    "https://esm.sh/v131/@regions-of-indonesia/utils@5.0.1/denonext/utils.mjs": "20ae036b8cf7e008e83cc9e01e41d1ddd060595e313aa4cc374efbb6c1fa6254"
   }
 }
