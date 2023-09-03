@@ -15,13 +15,13 @@ const recordToArray = (record: Record<string, string>) => {
 };
 
 const getProvinces = async (): Promise<Region[]> =>
-  PROVINCES ? PROVINCES : (PROVINCES = recordToArray((await import("@regions-of-indonesia/data/province")).PROVINCE));
+  PROVINCES ? PROVINCES : (PROVINCES = recordToArray((await import("@regions-of-indonesia/data/province")).default));
 const getDistricts = async (): Promise<Region[]> =>
-  DISTRICTS ? DISTRICTS : (DISTRICTS = recordToArray((await import("@regions-of-indonesia/data/district")).DISTRICT));
+  DISTRICTS ? DISTRICTS : (DISTRICTS = recordToArray((await import("@regions-of-indonesia/data/district")).default));
 const getSubdistricts = async (): Promise<Region[]> =>
-  SUBDISTRICTS ? SUBDISTRICTS : (SUBDISTRICTS = recordToArray((await import("@regions-of-indonesia/data/subdistrict")).SUBDISTRICT));
+  SUBDISTRICTS ? SUBDISTRICTS : (SUBDISTRICTS = recordToArray((await import("@regions-of-indonesia/data/subdistrict")).default));
 const getVillages = async (): Promise<Region[]> =>
-  VILLAGES ? VILLAGES : (VILLAGES = recordToArray((await import("@regions-of-indonesia/data/village")).VILLAGE));
+  VILLAGES ? VILLAGES : (VILLAGES = recordToArray((await import("@regions-of-indonesia/data/village")).default));
 
 const MEMO_FIND_REGION: Record<string, Region | undefined> = {};
 
