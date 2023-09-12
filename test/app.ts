@@ -2,7 +2,9 @@ import { assertEquals } from "std/assert/assert_equals.ts";
 
 import { isRegion, isRegions } from "@regions-of-indonesia/utils";
 
-import app from "~/app.ts";
+import create from "~/app.ts";
+
+const app = create();
 
 type FetchCallback = (response: Response) => Promise<void>;
 

@@ -1,5 +1,9 @@
 Deno.env.set("MODE", "production");
 
-import { serve } from "./main.ts";
+console.time("app");
+const create = (await import("~/app.ts")).default;
+console.timeEnd("app");
 
-await serve();
+import serve from "./serve.ts";
+
+await serve(create());

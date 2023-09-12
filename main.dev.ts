@@ -1,5 +1,13 @@
 Deno.env.set("MODE", "development");
 
-import { serve } from "./main.ts";
+console.time("app");
+const create = (await import("~/app.ts")).default;
+console.timeEnd("app");
 
-await serve();
+const logger = (await import("hono/middleware.ts")).logger;
+
+const app = create((app) => app.use("*", logger()));
+
+import serve from "./serve.ts";
+
+await serve(app);

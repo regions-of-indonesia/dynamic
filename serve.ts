@@ -1,7 +1,7 @@
-const serve = async () => {
-  try {
-    const app = (await import("~/app.ts")).default;
+import type { Hono } from "hono/mod.ts";
 
+const serve = async <T extends Hono>(app: T) => {
+  try {
     const port = 8000;
     const hostname = "0.0.0.0";
 
@@ -24,4 +24,4 @@ const serve = async () => {
   }
 };
 
-export { serve };
+export default serve;
