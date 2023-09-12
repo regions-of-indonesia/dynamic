@@ -4,7 +4,7 @@ console.time("app");
 const create = (await import("~/app.ts")).default;
 console.timeEnd("app");
 
-const logger = (await import("hono/middleware.ts")).logger;
+const { logger } = await import("hono/middleware.ts");
 
 const app = create((app) => app.use("*", logger()));
 
