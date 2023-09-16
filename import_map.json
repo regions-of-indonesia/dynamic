@@ -2,9 +2,9 @@
   "imports": {
     "~/": "./src/",
     "std/assert/": "https://deno.land/std@0.201.0/assert/",
-    "hono/": "https://deno.land/x/hono@v3.6.0/",
-    "@regions-of-indonesia/data/": "https://esm.sh/@regions-of-indonesia/data@5.2.0/",
-    "@regions-of-indonesia/types": "https://esm.sh/@regions-of-indonesia/types@5.1.0",
-    "@regions-of-indonesia/utils": "https://esm.sh/@regions-of-indonesia/utils@5.1.0"
+    "hono/": "https://deno.land/x/hono@v3.6.1/",
+    "@regions-of-indonesia/data/": "https://esm.sh/@regions-of-indonesia/data@5.2.1/",
+    "@regions-of-indonesia/types": "https://esm.sh/@regions-of-indonesia/types@5.1.1",
+    "@regions-of-indonesia/utils": "https://esm.sh/@regions-of-indonesia/utils@5.1.1"
   }
 }
