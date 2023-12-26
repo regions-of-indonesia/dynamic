@@ -22,23 +22,12 @@ const create = (init: (hono: Hono) => Hono = (hono) => hono) => {
   app.route("/search", routes.search);
 
   app
-    .get("/", (ctx) => {
-      return ctx.json({ name: "regions-of-indonesia" });
-    })
-    .notFound((ctx) => {
-      return ctx.json({ message: "Not found" }, 404);
-    })
+    .get("/", (ctx) => ctx.json({ name: "regions-of-indonesia" }))
+    .notFound((ctx) => ctx.json({ message: "Not found" }, 404))
     .onError((err, ctx) => {
-      if (err instanceof HTTPException) {
-        return err.getResponse();
-      }
-
+      if (err instanceof HTTPException) return err.getResponse();
       let message = "Internal server error";
-
-      if (err instanceof Error) {
-        message = err.message;
-      }
-
+      if (err instanceof Error) message = err.message;
       return ctx.json({ message }, 500);
     });
 

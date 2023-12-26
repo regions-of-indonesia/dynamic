@@ -25,9 +25,7 @@ const getVillages = async (): Promise<Region[]> =>
 
 const MEMO_FIND_REGION: Record<string, Region | undefined> = {};
 
-const findRegion = (code: string, regions: Region[]) => {
-  return (MEMO_FIND_REGION[code] ??= regions.find((region) => region.code === code));
-};
+const findRegion = (code: string, regions: Region[]) => (MEMO_FIND_REGION[code] ??= regions.find((region) => region.code === code));
 
 const findProvince = async (code: string) => findRegion(code, await getProvinces());
 const findDistrict = async (code: string) => findRegion(code, await getDistricts());
@@ -38,10 +36,9 @@ const MEMO_FILTER_REGIONS: Record<string, Region[]> = {};
 
 const filterRegions = (parent: string, regions: Region[]) => {
   let splitted: string[] = [];
-  return (MEMO_FILTER_REGIONS[parent] ??= regions.filter((region) => {
-    splitted = splitRegionCode(region.code);
-    return parent === joinRegionCode(splitted.slice(0, splitted.length - 1));
-  }));
+  return (MEMO_FILTER_REGIONS[parent] ??= regions.filter(
+    (region) => ((splitted = splitRegionCode(region.code)), parent === joinRegionCode(splitted.slice(0, splitted.length - 1)))
+  ));
 };
 
 const filterDistricts = async (parent: string) => filterRegions(parent, await getDistricts());
@@ -49,38 +46,34 @@ const filterSubdistricts = async (parent: string) => filterRegions(parent, await
 const filterVillages = async (parent: string) => filterRegions(parent, await getVillages());
 
 const simpleSearchRegions = (() => {
-  type Result = { score: number; item: Region };
+  type Result = { score: number } & Region;
 
-  const limit = 25;
-  const sortFn = (a: Result, b: Result) => b.score - a.score;
-  const mapFn = (result: Result) => result.item;
+  const limit = 25,
+    sortFn = (a: Result, b: Result): number => b.score - a.score;
 
-  return (query: string, data: Region[]): Region[] => {
-    const results: Result[] = [];
-
+  return (query: string, regions: Region[]): Region[] => {
     query = query.toLowerCase();
 
-    let key: keyof Region;
-    let normalizedValue: string;
-    let index: number;
+    const results: Result[] = [],
+      pick: Region[] = [];
 
-    for (const item of data) {
-      let score = 0;
+    let index: number, score: number, code: string, name: string;
 
-      for (key in item) {
-        if (key in item && typeof item[key] === "string") {
-          normalizedValue = item[key].toLowerCase();
-          index = normalizedValue.indexOf(query);
-          if (index !== -1) score += 1 / (index + 1);
-        }
+    for ({ code, name } of regions) {
+      if ((index = name.toLowerCase().indexOf(query)) !== -1) {
+        if ((score = 1 / (index + 1)) > 0) results.push({ score, code, name });
       }
-
-      if (score > 0) results.push({ item, score });
     }
 
     results.sort(sortFn);
 
-    return results.slice(0, limit).map(mapFn);
+    for (index = 0; index < results.length; index++) {
+      if (index >= limit) break;
+      ({ code, name } = results[index]);
+      pick.push({ code, name });
+    }
+
+    return pick;
   };
 })();
 
